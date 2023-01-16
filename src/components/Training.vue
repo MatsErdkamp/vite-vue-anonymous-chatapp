@@ -3,48 +3,20 @@
     <div class="gradient-orb"></div>
 
     <div class="screen-content">
-      <h1>Question {{ questionIndex }}</h1>
+      <h1>Done!</h1>
 
-      <p>{{ questionList[questionIndex - 1] }}</p>
-
-      <div style="width: 100%">
-        <div class="likert-labels">
-          <small>disagree</small>
-          <small>neutral</small>
-          <small>agree</small>
-        </div>
-        <div class="likert-container">
-          <div :key="i" v-for="i in [1, 2, 3, 4, 5]">
-            <div
-              class="likert-item"
-              @click="activeItem = i"
-              :class="{ active: activeItem == i }"
-            >
-              {{ i }}
-            </div>
-          </div>
-        </div>
+      <div>
+        <h2>Finding users like you...</h2>
+        <ProgressSpinner strokeWidth="4" stroke-color="var(--surface-ground)" />
       </div>
 
-      <div class="button-container">
-        <button
-          v-if="questionIndex > 1 && questionIndex < questionList.length"
-          class="basic-outline-button"
-          @click="changeQuestionIndex(-1)"
-        >
-          Back</button
-        ><button v-if="questionIndex < questionList.length " class="basic-colored-button" @click="changeQuestionIndex(1)">
-          Next question
-        </button>
-        <router-link to="/training" v-if="questionIndex === questionList.length" class="basic-colored-button" >
-          Finish questionnaire
-        </router-link>
-      </div>
+      <div></div>
+      <div></div>
     </div>
   </div>
 </template>
-  
-<script setup>
+    
+  <script setup>
 import { ref } from "vue";
 
 const activeItem = ref(3);
@@ -56,13 +28,15 @@ const questionList = [
 ];
 
 function changeQuestionIndex(change) {
-
-    questionIndex.value = Math.max(1, Math.min(questionList.length, questionIndex.value + change))
-    activeItem.value = 0
+  questionIndex.value = Math.max(
+    1,
+    Math.min(questionList.length, questionIndex.value + change)
+  );
+  activeItem.value = 0;
 }
 </script>
-  
-  <style scoped>
+    
+    <style scoped>
 .gradient-orb {
   position: absolute;
   bottom: 0;
@@ -81,7 +55,7 @@ function changeQuestionIndex(change) {
 }
 
 .likert-labels small {
-    width: 40px;
+  width: 40px;
 }
 
 .likert-container {
@@ -171,4 +145,14 @@ function changeQuestionIndex(change) {
 .basic-colored-button:hover {
   outline: 5px solid rgba(22, 120, 211, 0.5);
 }
+
+.p-progress-spinner-circle {
+  stroke: grey !important;
+}
+
+
+
+
+
+
 </style>
