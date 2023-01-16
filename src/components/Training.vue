@@ -16,27 +16,18 @@
   </div>
 </template>
     
-  <script setup>
-import { ref } from "vue";
+<script setup>
+import { useRouter, useRoute } from 'vue-router'
+const router = useRouter()
 
-const activeItem = ref(3);
-var questionIndex = ref(1);
-const questionList = [
-  "question 1 content",
-  "question 2 content",
-  "question 3 content",
-];
 
-function changeQuestionIndex(change) {
-  questionIndex.value = Math.max(
-    1,
-    Math.min(questionList.length, questionIndex.value + change)
-  );
-  activeItem.value = 0;
-}
+setTimeout(() => {
+  router.push('/categories')
+}, 2000)
+
 </script>
     
-    <style scoped>
+<style scoped>
 .gradient-orb {
   position: absolute;
   bottom: 0;
@@ -149,10 +140,4 @@ function changeQuestionIndex(change) {
 .p-progress-spinner-circle {
   stroke: grey !important;
 }
-
-
-
-
-
-
 </style>

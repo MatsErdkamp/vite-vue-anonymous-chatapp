@@ -8,6 +8,8 @@ import Login from "./components/Login.vue";
 import Likert from "./components/Likert.vue";
 import Questions from "./components/Questions.vue";
 import Training from "./components/Training.vue";
+import Categories from "./components/Categories.vue";
+import Chats from "./components/Chats.vue";
 
 import 'primevue/resources/themes/saga-blue/theme.css' //theme
 import 'primevue/resources/primevue.min.css' //core css
@@ -39,6 +41,17 @@ const routes = [{
         name: "Training",
         component: Training,
     },
+    {
+        path: "/categories/",
+        name: "Categories",
+        component: Categories,
+    },
+    {
+        path: "/chats/",
+        name: "Chats",
+        component: Chats,
+    },
+
 
 ];
 

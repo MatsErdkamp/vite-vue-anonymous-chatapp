@@ -1,6 +1,8 @@
 <template>
   <div class="phone-container">
-    <router-view style="height:100%"></router-view>
+    <transition name="fade">
+      <router-view style="height:100%"></router-view>
+    </transition>
   </div>
 </template>
 
@@ -9,7 +11,6 @@
 </script>
 
 <style>
-
 .router-link-active {
   text-decoration: unset;
 }
@@ -26,7 +27,7 @@
 }
 
 html {
-  background: rgba(240,240,240);
+  background: rgba(240, 240, 240);
   font-family: 'Poppins', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -38,10 +39,9 @@ html {
   border-radius: 8px;
   margin: auto;
   margin-top: 5vh;
-  border: 1px solid rgb(200,200,200);
+  border: 1px solid rgb(200, 200, 200);
   background: white;
   box-shadow: 0px 6px 12px -4px rgba(0, 0, 0, 0.3);
   z-index: 0;
 }
-
 </style>

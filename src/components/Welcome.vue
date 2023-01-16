@@ -28,16 +28,20 @@ export default {};
 bottom: 0;
   transform: translate(-25%, 50%);
   left: 0;
-  background: radial-gradient(rgba(22, 120, 211, 0.5), transparent 60%);
+  background: radial-gradient(rgba(224, 236, 248, 0.5), transparent 60%);
   height: 100%;
   width: 200%;
   z-index: 1;
+
 }
 
 .welcome-container {
   overflow: hidden;
   position: relative;
   height: inherit;
+  background: rgb(64, 156, 241);
+  color: white;
+  border-radius: 8px;
 }
 
 .screen-content {
@@ -52,7 +56,7 @@ bottom: 0;
 }
 
 .basic-colored-button {
-  background: rgb(22, 120, 211);
+  background: rgb(255, 255, 255);
   padding: 12px 16px;
   border-radius: 8px;
   outline: 0;
@@ -61,7 +65,7 @@ bottom: 0;
   font-size: 1em;
   font-weight: 600;
   box-shadow: 0px 4px 8px -4px rgba(22, 120, 211, 0.8);
-  color: white;
+  color:  rgb(64, 156, 241);
 }
 
 .basic-colored-button:hover {
