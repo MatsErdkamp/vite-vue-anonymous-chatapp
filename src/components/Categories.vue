@@ -2,7 +2,7 @@
     <div class="welcome-container">
         <div class="gradient-orb"></div>
         <div class="screen-content">
-            <h1>Chat topics</h1>
+            <h1>Suggested chat topics</h1>
             <div class="topics">
                 <router-link to="/chats">
                     <div :key="topic" v-for="topic in topics">
@@ -17,7 +17,7 @@
     
 <script setup>
 
-const topics = ['Football', 'Golf', 'Rock music', 'Religion', 'Cooking']
+const topics = ['Sports', 'Movies', 'Cooking', 'Religion', 'Music', 'Money']
 
 </script>
     
@@ -55,9 +55,7 @@ const topics = ['Football', 'Golf', 'Rock music', 'Religion', 'Cooking']
     transition: 200ms ease outline;
 }
 
-.topic-item
-
-.topic-item:hover {
+.topic-item .topic-item:hover {
     outline: 5px solid rgb(14, 65, 112);
 }
 
