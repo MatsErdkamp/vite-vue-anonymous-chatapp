@@ -27,7 +27,7 @@
     
 <script setup>
 
-const users = ['statement 1', 'statement 2', 'statement 3', 'statement 4', 'statement 5', 'statement 6', 'statement 7', 'statement 8',]
+const users = ['churrosforever', 'Masterchief', 'BookWorm', 'RockstarStatus', 'random_username', 'PlayfulPenguin', 'Blossom']
 
 </script>
     
