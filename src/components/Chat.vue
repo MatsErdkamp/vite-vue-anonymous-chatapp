@@ -42,7 +42,7 @@
 <script setup>
 import { ref } from 'vue'
 
-const showPopup = ref(false)
+const showPopup = ref(true)
 const textModel = ref('')
 
 const users = ['statement 1', 'statement 2', 'statement 3', 'statement 4', 'statement 5', 'statement 6', 'statement 7', 'statement 8',]
