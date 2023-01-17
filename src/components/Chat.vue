@@ -1,10 +1,26 @@
 <template>
     <div class="welcome-container">
+        <div v-if="showPopup == true" class="screen-content">
 
+            <div class="popup-content">
+                <h2>Do you agree with their statement?</h2>
 
-        <div class="screen-content">
+                <div class="input-parent">
+                    <div style="display:flex; width: 100%; justify-content:space-between"> <small>disagree</small><small>agree</small></div>
+
+                    <input type="range" min="1" max="100" value="50" style="width:80%"  />
+                </div>
+
+                <button @click="showPopup = false" class="basic-colored-button" style="max-height:40px; max-width: 50%; margin-top:24px" >Confirm</button>
+            </div>
+
+        </div>
+        <div v-else class="screen-content">
             <div class="chat-header">
-                <h2 class="chat-topic">statement {{ $route.params.id }}</h2>
+                <h2 class="chat-topic">{{ $route.params.user }}</h2>
+            </div>
+            <div class="chat-header-statement">
+                <h3 style="margin:0">[statement]</h3>
             </div>
 
             <div class="messages-container">
@@ -20,6 +36,8 @@
     
 <script setup>
 import { ref } from 'vue'
+
+const showPopup = ref(true)
 const textModel = ref('')
 
 const users = ['statement 1', 'statement 2', 'statement 3', 'statement 4', 'statement 5', 'statement 6', 'statement 7', 'statement 8',]
@@ -37,6 +55,19 @@ function sendMessage() {
     
 <style scoped>
 
+.input-parent {
+    width: 80%;
+}
+
+.popup-content {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 120px;
+    flex-direction: column;
+    margin-top: 200px;
+}
+
 
 .chat-bubble {
     background: rgb(22, 120, 211);
@@ -49,7 +80,7 @@ function sendMessage() {
     text-align: start;
     box-shadow: 0px 4px 8px -2px rgba(81, 92, 104, 0.527);
 
-    
+
 }
 
 .messages-container {
@@ -97,6 +128,17 @@ function sendMessage() {
     height: 80px;
     margin: 0;
     padding-top: 24px;
+    border-bottom: 1px solid rgb(170, 179, 189);
+    box-shadow: 0px 4px 8px -2px rgba(170, 179, 189, 0.527);
+    ;
+}
+
+
+.chat-header-statement {
+    background: rgb(247, 252, 255);
+    width: 100%;
+    margin: 0;
+    padding: 4px;
     border-bottom: 1px solid rgb(170, 179, 189);
     box-shadow: 0px 4px 8px -2px rgba(170, 179, 189, 0.527);
     ;

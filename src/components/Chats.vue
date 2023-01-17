@@ -15,6 +15,9 @@
                             <div class="fake-image"></div>
                             <div class="text-container">
                                 <div class="statement"> {{ user }}</div>
+                                <div class="statement" style="color:grey; font-size: 0.8em;"> <i>{{
+                                    statements[index]
+                                }}</i></div>
                             </div>
                         </div>
                     </router-link>
@@ -28,12 +31,10 @@
 <script setup>
 
 const users = ['churrosforever', 'Masterchief', 'BookWorm', 'RockstarStatus', 'random_username', 'PlayfulPenguin', 'Blossom', 'SweetiePira']
-
+const statements = ['churrosforever', 'Masterchief', 'BookWorm', 'RockstarStatus', 'random_username', 'PlayfulPenguin', 'Blossom', 'SweetiePira']
 </script>
     
 <style scoped>
-
-
 .chat-header {
     background: rgb(245, 245, 245);
     width: 100%;
@@ -56,6 +57,9 @@ const users = ['churrosforever', 'Masterchief', 'BookWorm', 'RockstarStatus', 'r
     height: 100%;
     padding: 24px 0;
     font-size: 0.9em;
+    width: 70%;
+    text-align: left;
+    margin-left: 30%;
 
 }
 
