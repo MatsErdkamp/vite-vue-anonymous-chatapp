@@ -36,7 +36,7 @@
         ><button v-if="questionIndex < questionList.length " class="basic-colored-button" @click="changeQuestionIndex(1)">
           Next question
         </button>
-        <router-link to="/training" v-if="questionIndex === questionList.length" class="basic-colored-button" >
+        <router-link to="/chats" v-if="questionIndex === questionList.length" class="basic-colored-button" >
           Finish questionnaire
         </router-link>
       </div>
