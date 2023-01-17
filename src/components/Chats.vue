@@ -31,7 +31,7 @@
 <script setup>
 
 const users = ['churrosforever', 'Masterchief', 'BookWorm', 'RockstarStatus', 'random_username', 'PlayfulPenguin', 'Blossom', 'SweetiePira']
-const statements = ['strongly dislikes sports', 'loves hockey', 'loves sports', 'feels neutral about sports', 'feels neutral about football', 'loves darts', 'strongly dislikes sports', 'loves hockey', ]
+const statements = ['loves sports', 'loves hockey', 'loves darts', 'feels neutral about sports', 'feels neutral about football', 'hates tennis', 'strongly dislikes sports', 'loves hockey', ]
 </script>
     
 <style scoped>
