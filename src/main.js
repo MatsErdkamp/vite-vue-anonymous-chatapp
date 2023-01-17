@@ -9,6 +9,7 @@ import Likert from "./components/Likert.vue";
 import Questions from "./components/Questions.vue";
 import Training from "./components/Training.vue";
 import Categories from "./components/Categories.vue";
+import CategoryQuestions from "./components/CategoryQuestions.vue";
 import Chats from "./components/Chats.vue";
 import Chat from "./components/Chat.vue";
 
@@ -36,6 +37,11 @@ const routes = [{
         path: "/questions/",
         name: "Questions",
         component: Questions,
+    },
+    {
+        path: "/categoryquestions/",
+        name: "CategoryQuestions",
+        component: CategoryQuestions,
     },
     {
         path: "/training/",

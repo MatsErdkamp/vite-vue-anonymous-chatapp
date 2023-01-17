@@ -4,7 +4,7 @@
         <div class="screen-content">
             <h1>Suggested chat topics</h1>
             <div class="topics">
-                <router-link to="/chats">
+                <router-link to="/categoryquestions">
                     <div :key="topic" v-for="topic in topics">
                         <div active-class="" class="topic-item">{{ topic }}</div>
                     </div>
