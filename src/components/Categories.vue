@@ -17,7 +17,7 @@
     
 <script setup>
 
-const topics = ['Sports', 'Movies', 'Cooking', 'Religion', 'Music', 'Money']
+const topics = ['Movies', 'Sports', 'Cooking', 'Religion', 'Music', 'Money']
 
 </script>
     
