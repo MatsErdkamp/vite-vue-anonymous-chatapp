@@ -6,12 +6,15 @@
                 <h2>Do you agree with their statement?</h2>
 
                 <div class="input-parent">
-                    <div style="display:flex; width: 100%; justify-content:space-between"> <small>disagree</small><small>agree</small></div>
+                    <div style="display:flex; width: 100%; justify-content:space-between">
+                        <small>disagree</small><small>agree</small>
+                    </div>
 
-                    <input type="range" min="1" max="100" value="50" style="width:80%"  />
+                    <input type="range" min="1" max="100" value="50" style="width:80%" />
                 </div>
 
-                <button @click="showPopup = false" class="basic-colored-button" style="max-height:40px; max-width: 50%; margin-top:24px" >Confirm</button>
+                <button @click="showPopup = false" class="basic-colored-button"
+                    style="max-height:40px; max-width: 50%; margin-top:24px">Confirm</button>
             </div>
 
         </div>
@@ -24,8 +27,10 @@
             </div>
 
             <div class="messages-container">
-                <div class="chat-bubble" :key="message" v-for="message in messages">
-                    {{ message }}
+                <div :key="message" v-for="message in messages">
+
+                    <div v-if="message.sender == 'you'" class="chat-bubble"> {{ message.message }}</div>
+                    <div v-else class="chat-bubble-other"> {{ message.message }}</div>
                 </div>
             </div>
             <div class="chat-footer"> <input v-model="textModel" class="type-field" /><button class="send-button"
@@ -47,14 +52,20 @@ const messages = ref([])
 function sendMessage() {
 
 
-    messages.value.push(textModel.value)
+    messages.value.push({ 'message': textModel.value, 'sender': 'you' })
+
+
+    setTimeout(() => {
+        messages.value.push({ 'message': 'hellooooooooooooo', 'sender': 'them' })
+    }, 3000)
+
+
 }
 
 
 </script>
     
 <style scoped>
-
 .input-parent {
     width: 80%;
 }
@@ -69,6 +80,22 @@ function sendMessage() {
 }
 
 
+.chat-bubble-other {
+    background: rgb(104, 120, 136);
+    color: white;
+    padding: 16px;
+    margin: 12px;
+    border-radius: 8px 8px 8px 0px;
+    margin-top: 16px;
+    text-align: start;
+    box-shadow: 0px 4px 8px -2px rgba(81, 92, 104, 0.527);
+    width: 50%;
+    margin-right: 45%;
+
+
+}
+
+
 .chat-bubble {
     background: rgb(22, 120, 211);
     color: white;
@@ -76,9 +103,10 @@ function sendMessage() {
     margin: 12px;
     border-radius: 8px 8px 0px 8px;
     margin-top: 16px;
-    width: 50%;
     text-align: start;
     box-shadow: 0px 4px 8px -2px rgba(81, 92, 104, 0.527);
+    width: 50%;
+    margin-left: 45%;
 
 
 }
@@ -86,10 +114,8 @@ function sendMessage() {
 .messages-container {
     width: 100%;
     height: 100%;
-    padding: ;
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
 }
 
 
