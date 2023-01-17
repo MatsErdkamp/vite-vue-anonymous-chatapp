@@ -5,10 +5,14 @@
     <div class="screen-content">
       <h1>Create an account</h1>
 
-      <div >
+      <div>
         <span class="p-float-label">
           <InputText id="username" type="text" v-model="email" />
           <label for="username">Email</label>
+        </span>
+        <span class="p-float-label" style="margin-top:32px;">
+          <InputText id="username" type="password" v-model="password" />
+          <label for="username">Username</label>
         </span>
         <span class="p-float-label" style="margin-top:32px;">
           <InputText id="username" type="password" v-model="password" />
