@@ -51,7 +51,7 @@ const activeItem = ref(3);
 var questionIndex = ref(1);
 const questionList = [
   "I am not afraid to give my opinion if I feel strongly about something.",
-  "I am emphatetic person.",
+  "I am empaathetic person.",
   "I have to be well prepared before public speaking.",
 ];
 
