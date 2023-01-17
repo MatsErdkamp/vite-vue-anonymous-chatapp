@@ -4,9 +4,9 @@
         <div class="screen-content">
             <h1>Chat topics</h1>
             <div class="topics">
-                <router-link to="/chats/">
+                <router-link to="/chats">
                     <div :key="topic" v-for="topic in topics">
-                        <div class="topic-item">{{ topic }}</div>
+                        <div active-class="" class="topic-item">{{ topic }}</div>
                     </div>
                 </router-link>
             </div>
@@ -35,7 +35,7 @@ const topics = ['Football', 'Golf', 'Rock music', 'Religion', 'Cooking']
 
 .topics {
     width: 100%;
-
+    text-decoration: none !important;
 }
 
 .topic-item {
@@ -54,6 +54,8 @@ const topics = ['Football', 'Golf', 'Rock music', 'Religion', 'Cooking']
     outline: 0px solid rgb(22, 120, 211);
     transition: 200ms ease outline;
 }
+
+.topic-item
 
 .topic-item:hover {
     outline: 5px solid rgb(14, 65, 112);

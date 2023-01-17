@@ -10,6 +10,7 @@ import Questions from "./components/Questions.vue";
 import Training from "./components/Training.vue";
 import Categories from "./components/Categories.vue";
 import Chats from "./components/Chats.vue";
+import Chat from "./components/Chat.vue";
 
 import 'primevue/resources/themes/saga-blue/theme.css' //theme
 import 'primevue/resources/primevue.min.css' //core css
@@ -51,6 +52,11 @@ const routes = [{
         name: "Chats",
         component: Chats,
     },
+    {
+        path: "/chat/:id",
+        name: "Chat",
+        component: Chat,
+    },
 
 
 ];
@@ -58,6 +64,8 @@ const routes = [{
 const router = createRouter({
     history: createWebHistory(),
     routes,
+    linkActiveClass: "",
+    linkExactActiveClass: "",
 });
 
 const app = createApp(App)

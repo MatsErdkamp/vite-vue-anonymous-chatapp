@@ -11,12 +11,20 @@
 </script>
 
 <style>
-.router-link-active {
-  text-decoration: unset;
+
+
+a {
+  text-decoration: none;
 }
 
-.router-link-exact {
-  text-decoration: unset;
+
+.router-link-active {
+  text-decoration: unset !important;
+
+}
+
+.router-link-active-exact {
+  text-decoration: unset !important;
 }
 
 
@@ -31,6 +39,7 @@ html {
   font-family: 'Poppins', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-decoration: none !important;
 }
 
 .phone-container {
