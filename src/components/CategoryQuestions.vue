@@ -50,9 +50,7 @@ import { ref } from "vue";
 const activeItem = ref(3);
 var questionIndex = ref(1);
 const questionList = [
-  "1",
-  "2",
-  "3",
+  "Category specific question",
 ];
 
 function changeQuestionIndex(change) {
