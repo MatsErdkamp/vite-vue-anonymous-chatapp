@@ -50,7 +50,7 @@ import { ref } from "vue";
 const activeItem = ref(3);
 var questionIndex = ref(1);
 const questionList = [
-  "Category specific question",
+  "How interested are you in sports at competitive levels?",
 ];
 
 function changeQuestionIndex(change) {
