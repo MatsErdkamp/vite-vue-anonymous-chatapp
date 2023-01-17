@@ -23,7 +23,7 @@
                 <h2 class="chat-topic">{{ $route.params.user }}</h2>
             </div>
             <div class="chat-header-statement">
-                <h3 style="margin:0">[statement]</h3>
+                <h3 style="margin:0">I love darts</h3>
             </div>
 
             <div class="messages-container">
