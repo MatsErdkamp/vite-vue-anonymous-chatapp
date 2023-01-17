@@ -9,9 +9,9 @@
 
       <div style="width: 100%">
         <div class="likert-labels">
-          <small>disagree</small>
+          <small>not at all</small>
           <small>neutral</small>
-          <small>agree</small>
+          <small>very</small>
         </div>
         <div class="likert-container">
           <div :key="i" v-for="i in [1, 2, 3, 4, 5]">
