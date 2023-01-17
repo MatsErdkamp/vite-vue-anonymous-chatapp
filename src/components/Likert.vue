@@ -3,7 +3,7 @@
       <div class="gradient-orb"></div>
   
       <div class="screen-content">
-        <h1>Thank you for joining [app name]!</h1>
+        <h1>Thank you for joining AI-nonymous!</h1>
         <p>To pair you up with anonymous people like you, we first need to know a bit more about you.</p>
   
         <router-link to="/questions" class="basic-colored-button">Go to questions</router-link>

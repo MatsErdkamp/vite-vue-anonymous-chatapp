@@ -8,6 +8,8 @@
       <div>
         <h2>Finding users like you...</h2>
         <ProgressSpinner strokeWidth="4" stroke-color="var(--surface-ground)" />
+
+        <p>By using the app, we will keep learning about you. Recommendations will become stronger over time</p>
       </div>
 
       <div></div>
@@ -23,7 +25,7 @@ const router = useRouter()
 
 setTimeout(() => {
   router.push('/categories')
-}, 2000)
+}, 4000)
 
 </script>
     

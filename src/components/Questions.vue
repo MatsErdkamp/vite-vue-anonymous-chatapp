@@ -50,9 +50,9 @@ import { ref } from "vue";
 const activeItem = ref(3);
 var questionIndex = ref(1);
 const questionList = [
-  "question 1 content",
-  "question 2 content",
-  "question 3 content",
+  "I am not afraid to give my opinion if I feel strongly about something.",
+  "I am emphatetic person.",
+  "I have to be well prepared before public speaking.",
 ];
 
 function changeQuestionIndex(change) {

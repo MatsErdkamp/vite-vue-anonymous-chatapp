@@ -3,7 +3,9 @@
         <div class="gradient-orb"></div>
 
         <div class="screen-content">
-            <h1>Chat topics</h1>
+            <div class="chat-header">
+                <h2 class="chat-topic">Choose a chat partner</h2>
+            </div>
 
             <div class="topics">
                 <div :key="user" v-for="user, index in users">
@@ -30,6 +32,22 @@ const users = ['statement 1', 'statement 2', 'statement 3', 'statement 4', 'stat
 </script>
     
 <style scoped>
+
+
+.chat-header {
+    background: rgb(245, 245, 245);
+    width: 100%;
+    height: 120px;
+    margin: 0;
+    padding-top: 24px;
+    border-bottom: 1px solid rgb(170, 179, 189);
+    box-shadow: 0px 4px 8px -2px rgba(170, 179, 189, 0.527);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+
 .statement {
     color: #2c3e50;
 }
@@ -55,7 +73,6 @@ const users = ['statement 1', 'statement 2', 'statement 3', 'statement 4', 'stat
 
 .topics {
     width: 100%;
-    margin-top: 48px;
 }
 
 .topic-item {

@@ -1,6 +1,6 @@
 <template>
     <div class="welcome-container">
-        <div class="gradient-orb"></div>
+
 
         <div class="screen-content">
             <div class="chat-header">

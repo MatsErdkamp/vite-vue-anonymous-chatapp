@@ -3,11 +3,11 @@
     <div class="gradient-orb"></div>
 
     <div class="screen-content">
-      <h1>App Name</h1>
+      <h1>AI-nonymous</h1>
 
       <div>
         <p>
-          [app name] is an anonymous chat app powered by artificial
+          AI-nonymous is an anonymous chat app powered by artificial
           intelligence. Instead of talking to random people, you will be matched
           up with people similar to you!
         </p>
