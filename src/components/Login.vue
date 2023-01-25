@@ -11,7 +11,7 @@
           <label for="username">Email</label>
         </span>
         <span class="p-float-label" style="margin-top:32px;">
-          <InputText id="username" type="password" v-model="password" />
+          <InputText id="username" type="text" v-model="username" />
           <label for="username">Username</label>
         </span>
         <span class="p-float-label" style="margin-top:32px;">
@@ -29,6 +29,7 @@
 import { ref } from 'vue'
 
 const email = ref('')
+const username = ref('')
 const password = ref('')
 
 </script>
